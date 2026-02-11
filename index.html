@@ -661,6 +661,8 @@
   /* ---------- CONTENT SECTIONS ---------- */
   .content-section {
     display: none;
+    min-height: calc(100vh - 250px);
+    padding-bottom: 60px;
   }
 
   .content-section.active {
@@ -823,14 +825,14 @@
   /* ---------- 3D ROTATING STUDENTS CARDS ---------- */
   .students-wrapper {
     width: 100%;
-    height: 900px;
+    min-height: 600px;
     position: relative;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: visible;
-    margin: 40px 0 100px;
+    margin: 40px 0;
   }
 
   .students-inner {
@@ -842,11 +844,11 @@
     position: absolute;
     width: var(--w);
     height: var(--h);
-    top: 15%;
+    top: 50%;
     left: calc(50% - (var(--w) / 2) - 2.5px);
     z-index: 2;
     transform-style: preserve-3d;
-    transform: perspective(var(--perspective));
+    transform: perspective(var(--perspective)) translateY(-50%);
     animation: students-rotating 80s linear infinite;
   }
 
@@ -2023,6 +2025,10 @@
 
 </body>
 </html>
+
+
+
+
 
 
 
